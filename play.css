@@ -1,0 +1,88 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+  }
+  
+  .points{
+    color: rgb(136, 121, 121);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .world {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .score {
+    color: rgb(83, 111, 136);
+    position: absolute;
+    font-size: 6vmin;
+    right: 88vmin;
+    top: 3.5vmin; 
+     
+  }
+  .end-screen{
+    color: rgb(80, 98, 114);
+  }
+  .dino {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+  }
+  
+  .cactus {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+  }
+  .start-screen {
+    color: rgb(86, 106, 124);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%)
+  }
+
+
+  @media screen and (max-width: 600px){
+    .points{
+      text-align: center;
+      font-size: 4px;
+      
+  
+    }
+    .score{
+     top: 1vmin;
+     right: 35vmin;
+    }
+  }
